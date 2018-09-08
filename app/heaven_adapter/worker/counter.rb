@@ -9,7 +9,7 @@ class Worker::Counter
   end
 
   def dead_job?(job_id)
-    attempts_count_for(job_id) >= Adapter::Options.get(:retries_count)
+    attempts_count_for(job_id) >= Adapter::Options.get(:retry_count)
   end
 
   def remove_job!(job_id)

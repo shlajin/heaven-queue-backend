@@ -37,7 +37,7 @@ class Worker::MetricsCollector
   def status
     "Processed #{@count_success} jobs successfully
      (of #{@count_total} total) in #{@duration.to_i}
-     seconds (worker ran for #{@start_collection_at ? (Time.current - @start_collection_at).to_i : '-'}
+     seconds (worker has been running for #{@start_collection_at ? (Time.current - @start_collection_at).to_i : '-'}
      seconds)".squish
   end
 end

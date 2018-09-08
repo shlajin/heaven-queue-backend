@@ -4,8 +4,8 @@ class Adapter::Options
     dead_topic: nil,
     subscription: nil,
     project_id: nil,
-    delay_between_retries: 5.seconds.to_i,
-    retries_count: 3,
+    delay_between_retries: 5.minutes.to_i,
+    retry_count: 3,
   }
 
   def self.configure(&block)
